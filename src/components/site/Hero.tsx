@@ -17,7 +17,7 @@ const Hero = () => {
       <img
         src={heroImg}
         alt="Diverse tech team collaborating outdoors, warm tones"
-        className="absolute inset-0 size-full object-cover"
+        className="absolute inset-0 size-full object-cover grayscale"
         loading="eager"
         fetchPriority="high"
       />
