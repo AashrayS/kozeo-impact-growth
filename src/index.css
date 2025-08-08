@@ -103,19 +103,27 @@ All colors MUST be HSL.
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
+  * { @apply border-border; }
   body {
     font-family: var(--font-sans);
     @apply bg-background text-foreground antialiased;
-    background-image: var(--gradient-surface);
-    background-attachment: fixed;
-    background-size: cover;
   }
+  h1, h2 { font-family: var(--font-serif); }
+}
 
-  h1, h2 {
-    font-family: var(--font-serif);
+@layer utilities {
+  .story-link { position: relative; display: inline-block; }
+  .story-link::after {
+    content: "";
+    position: absolute; left: 0; bottom: 0; height: 2px; width: 100%;
+    background: hsl(var(--primary-foreground));
+    transform-origin: bottom right; transform: scaleX(0);
+    transition: transform 300ms ease;
   }
+  .story-link:hover::after { transform-origin: bottom left; transform: scaleX(1); }
+
+  .hover-scale { transition: transform 200ms ease; }
+  .hover-scale:hover { transform: scale(1.05); }
+
+  .pulse { animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; }
 }
