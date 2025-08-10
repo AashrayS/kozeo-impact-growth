@@ -11,16 +11,16 @@ const Loader = ({ onComplete }: LoaderProps) => {
   useEffect(() => {
     const timer1 = setTimeout(() => {
       setAnimationPhase("visible");
-    }, 800);
+    }, 400);
 
     const timer2 = setTimeout(() => {
       setAnimationPhase("exiting");
-    }, 2800);
+    }, 1400);
 
     const timer3 = setTimeout(() => {
       setIsVisible(false);
       onComplete();
-    }, 3800);
+    }, 2000);
 
     return () => {
       clearTimeout(timer1);
@@ -37,44 +37,30 @@ const Loader = ({ onComplete }: LoaderProps) => {
         animationPhase === "exiting" ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      <div className="text-center relative">
+      <div className="text-center">
         <div className="flex items-center justify-center gap-6 mb-8">
           <img 
             src="/favicon.png" 
             alt="Kozeo Logo" 
             className={`w-16 h-16 md:w-20 md:h-20 transition-all duration-1200 ease-out ${
               animationPhase === "entering"
-                ? "opacity-0 translate-x-8 scale-90"
+                ? "opacity-0 translate-y-4"
                 : animationPhase === "visible"
-                ? "opacity-100 translate-x-0 scale-100"
-                : "opacity-100 translate-x-0 scale-100"
+                ? "opacity-100 translate-y-0"
+                : "opacity-100 translate-y-0"
             }`}
           />
           <h1
-            className={`text-6xl md:text-8xl font-bold text-white tracking-tight transition-all duration-1200 ease-out ${
+            className={`text-6xl md:text-8xl font-bold text-white tracking-tight transition-all duration-1200 ease-out delay-200 ${
               animationPhase === "entering"
-                ? "opacity-0 translate-x-8 scale-90"
+                ? "opacity-0 translate-y-4"
                 : animationPhase === "visible"
-                ? "opacity-100 translate-x-0 scale-100"
-                : "opacity-100 translate-x-0 scale-100"
+                ? "opacity-100 translate-y-0"
+                : "opacity-100 translate-y-0"
             }`}
           >
             Kozeo
           </h1>
-        </div>
-        
-        {/* Subtle glow effect */}
-        <div className={`absolute inset-0 flex items-center justify-center gap-6 mb-8 transition-all duration-1200 ease-out blur-sm ${
-          animationPhase === "entering"
-            ? "opacity-0 translate-x-8 scale-90"
-            : animationPhase === "visible"
-            ? "opacity-20 translate-x-0 scale-100"
-            : "opacity-20 translate-x-0 scale-100"
-        }`}>
-          <div className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-lg"></div>
-          <div className="text-6xl md:text-8xl font-bold text-white tracking-tight">
-            Kozeo
-          </div>
         </div>
         
         {/* Loading indicator */}
