@@ -38,23 +38,23 @@ const Navbar = () => {
         ? "bg-black" 
         : "bg-white border-b border-gray-200"
     }`}>
-      <nav className="flex items-center justify-center px-8 py-4 relative" aria-label="Global">
+      <nav className="flex flex-col sm:flex-row items-center justify-center px-4 sm:px-8 py-3 sm:py-4 relative w-full" aria-label="Global">
         {/* Center logo */}
-        <div className="flex items-center justify-center">
-          <a href="/" className={`flex items-center gap-3 font-bold text-3xl tracking-tight transition-colors duration-300 ${
+        <div className="flex items-center justify-center w-full sm:w-auto mb-2 sm:mb-0">
+          <a href="/" className={`flex items-center gap-2 sm:gap-3 font-bold text-2xl sm:text-3xl tracking-tight transition-colors duration-300 ${
             isOnDarkBackground ? "text-white" : "text-black"
           }`}>
             <img 
               src="/favicon.png" 
               alt="Kozeo Logo" 
-              className="w-8 h-8"
+              className="w-7 h-7 sm:w-8 sm:h-8"
             />
             Kozeo
           </a>
         </div>
 
         {/* Right navigation - Login/Signup only */}
-        <div className="absolute right-8 flex items-center gap-4">
+        <div className="absolute right-4 sm:right-8 flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
           <Button 
             variant="outline" 
             size="sm" 

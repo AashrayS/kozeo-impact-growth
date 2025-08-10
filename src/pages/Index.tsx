@@ -57,7 +57,7 @@ const Index = () => {
               </div>
               
               <div className="grid md:grid-cols-3 gap-12 mt-20">
-                <div className="text-center">
+                <div className="text-center px-2 py-4">
                   <div className="w-16 h-16 bg-black rounded-full mx-auto mb-6 flex items-center justify-center">
                     <div className="w-8 h-8 bg-white rounded"></div>
                   </div>
@@ -65,7 +65,7 @@ const Index = () => {
                   <p className="text-gray-600">Every gig builds your credible tech portfolio with real-world projects from startups and NGOs.</p>
                 </div>
                 
-                <div className="text-center">
+                <div className="text-center px-2 py-4">
                   <div className="w-16 h-16 bg-black rounded-full mx-auto mb-6 flex items-center justify-center">
                     <div className="w-8 h-8 bg-white rounded-full"></div>
                   </div>
@@ -73,7 +73,7 @@ const Index = () => {
                   <p className="text-gray-600">Collaborative projects that develop communication, leadership, and technical skills employers value.</p>
                 </div>
                 
-                <div className="text-center">
+                <div className="text-center px-2 py-4">
                   <div className="w-16 h-16 bg-black rounded-full mx-auto mb-6 flex items-center justify-center">
                     <div className="w-8 h-8 bg-white rounded-sm"></div>
                   </div>
@@ -100,11 +100,11 @@ const Index = () => {
               <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
                 Join the movement that's making freelancing purposeful and profile development structured.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-black px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-colors">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full">
+                <button className="bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-gray-100 transition-colors w-full sm:w-auto">
                   Start Building Your Profile
                 </button>
-                <button className="border border-white text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white hover:text-black transition-colors">
+                <button className="border border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-white hover:text-black transition-colors w-full sm:w-auto">
                   Post a Project
                 </button>
               </div>

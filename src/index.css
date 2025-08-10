@@ -1,3 +1,4 @@
+/* Tailwind CSS directives - these will be processed by Tailwind's build system */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
