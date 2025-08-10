@@ -101,10 +101,10 @@ const Index = () => {
                 Join the movement that's making freelancing purposeful and profile development structured.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full">
-                <button className="bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-gray-100 transition-colors w-full sm:w-auto">
+                <button className="bg-white text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-lg font-medium hover:bg-gray-100 transition-colors inline-block w-auto">
                   Start Building Your Profile
                 </button>
-                <button className="border border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-white hover:text-black transition-colors w-full sm:w-auto">
+                <button className="border border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-lg font-medium hover:bg-white hover:text-black transition-colors inline-block w-auto">
                   Post a Project
                 </button>
               </div>
