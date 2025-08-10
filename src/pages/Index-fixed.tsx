@@ -1,15 +1,18 @@
 import Navbar from "@/components/site/Navbar";
 import Hero from "@/components/site/Hero";
 import Loader from "@/components/site/Loader";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Index = () => {
   const [showLoader, setShowLoader] = useState(true);
-  const { isVisible } = useScrollAnimation();
+  const [isContentVisible, setIsContentVisible] = useState(false);
 
   const handleLoaderComplete = () => {
     setShowLoader(false);
+    // Trigger content animation after loader completes
+    setTimeout(() => {
+      setIsContentVisible(true);
+    }, 100);
   };
 
   const orgLd = {
@@ -25,27 +28,25 @@ const Index = () => {
     <>
       {showLoader && <Loader onComplete={handleLoaderComplete} />}
       
-      <div className={`transition-opacity duration-500 ${showLoader ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`transition-all duration-1000 ease-out ${
+        showLoader 
+          ? 'opacity-0 translate-y-8' 
+          : isContentVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-8'
+      }`}>
         <Navbar />
         <main>
-          <div 
-            id="hero-section"
-            data-scroll-animation
-            className={`transition-all duration-1000 ease-out ${
-              isVisible('hero-section') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
+          <div className={`transition-all duration-1000 ease-out delay-200 ${
+            isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
             <Hero />
           </div>
 
           {/* Value Proposition Section */}
-          <section 
-            id="value-section"
-            data-scroll-animation
-            className={`py-24 bg-white transition-all duration-1000 ease-out ${
-              isVisible('value-section') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
+          <section className={`py-24 bg-white transition-all duration-1000 ease-out delay-300 ${
+            isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
             <div className="max-w-6xl mx-auto px-8">
               <div className="text-center mb-16">
                 <h2 className="text-5xl md:text-6xl font-normal leading-tight text-black mb-8">
@@ -85,14 +86,9 @@ const Index = () => {
           </section>
 
           {/* CTA Section */}
-          <section 
-            id="cta-section"
-            data-scroll-animation
-            className={`bg-black text-white py-24 transition-all duration-1000 ease-out ${
-              isVisible('cta-section') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`} 
-            data-section="testimonial"
-          >
+          <section className={`bg-black text-white py-24 transition-all duration-1000 ease-out delay-500 ${
+            isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`} data-section="testimonial">
             <div className="max-w-4xl mx-auto px-8 text-center">
               <h2 className="text-5xl md:text-6xl font-normal leading-tight mb-8">
                 Ready to build your<br />tech portfolio?
@@ -112,13 +108,9 @@ const Index = () => {
           </section>
 
           {/* Features Comparison */}
-          <section 
-            id="features-section"
-            data-scroll-animation
-            className={`py-24 bg-gray-50 transition-all duration-1000 ease-out ${
-              isVisible('features-section') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
+          <section className={`py-24 bg-gray-50 transition-all duration-1000 ease-out delay-700 ${
+            isContentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
             <div className="max-w-6xl mx-auto px-8">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-normal leading-tight text-black mb-8">

@@ -127,3 +127,16 @@ All colors MUST be HSL.
 
   .pulse { animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; }
 }
+
+/* Custom animations for Hero background */
+@keyframes slideRight {
+  0% { width: 0; transform: translateX(0); }
+  50% { width: 200px; transform: translateX(50vw); }
+  100% { width: 0; transform: translateX(100vw); }
+}
+
+@keyframes slideLeft {
+  0% { width: 0; transform: translateX(0); }
+  50% { width: 200px; transform: translateX(-50vw); }
+  100% { width: 0; transform: translateX(-100vw); }
+}
