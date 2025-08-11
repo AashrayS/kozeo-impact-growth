@@ -58,7 +58,7 @@ const Navbar = () => {
           <Button 
             variant="outline" 
             size="sm" 
-            className={`rounded-full px-3 py-1 sm:px-6 sm:py-3 text-xs sm:text-base transition-all duration-300 hover:scale-105 ${
+            className={`rounded-full px-2 py-1 sm:px-8 sm:py-4 text-xs sm:text-lg transition-all duration-300 hover:scale-105 ${
               isOnDarkBackground 
                 ? "border-white text-white bg-transparent hover:bg-white hover:text-black hover:shadow-lg" 
                 : "border-black text-black bg-transparent hover:bg-black hover:text-white hover:shadow-lg"
@@ -68,7 +68,7 @@ const Navbar = () => {
           </Button>
           <Button 
             size="sm" 
-            className={`rounded-full px-3 py-1 sm:px-6 sm:py-3 text-xs sm:text-base transition-all duration-300 hover:scale-105 ${
+            className={`rounded-full px-2 py-1 sm:px-8 sm:py-4 text-xs sm:text-lg transition-all duration-300 hover:scale-105 ${
               isOnDarkBackground 
                 ? "bg-white text-black hover:bg-gray-100 hover:shadow-lg" 
                 : "bg-black text-white hover:bg-gray-800 hover:shadow-lg"
