@@ -38,27 +38,27 @@ const Navbar = () => {
         ? "bg-black" 
         : "bg-white border-b border-gray-200"
     }`}>
-      <nav className="flex items-center justify-between sm:justify-center px-3 sm:px-8 py-2 sm:py-4 relative" aria-label="Global">
+      <nav className="flex items-center justify-center px-4 sm:px-8 py-3 sm:py-4 relative" aria-label="Global">
         {/* Center logo */}
-        <div className="flex items-center justify-start sm:justify-center sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2">
-          <a href="/" className={`flex items-center gap-2 sm:gap-3 font-bold text-xl sm:text-3xl tracking-tight transition-colors duration-300 ${
+        <div className="flex items-center justify-center">
+          <a href="/" className={`flex items-center gap-2 sm:gap-3 font-bold text-2xl sm:text-3xl tracking-tight transition-colors duration-300 ${
             isOnDarkBackground ? "text-white" : "text-black"
           }`}>
             <img 
               src="/favicon.png" 
               alt="Kozeo Logo" 
-              className="w-6 h-6 sm:w-8 sm:h-8"
+              className="w-7 h-7 sm:w-8 sm:h-8"
             />
             Kozeo
           </a>
         </div>
 
         {/* Right navigation - Login/Signup only */}
-        <div className="flex items-center gap-1 sm:gap-4 sm:absolute sm:right-0">
+        <div className="absolute right-4 sm:right-8 flex items-center gap-2 sm:gap-4">
           <Button 
             variant="outline" 
             size="sm" 
-            className={`rounded-full px-3 py-1 sm:px-6 sm:py-2 text-xs sm:text-base transition-all duration-300 hover:scale-105 ${
+            className={`rounded-full px-4 sm:px-6 text-sm sm:text-base transition-all duration-300 hover:scale-105 ${
               isOnDarkBackground 
                 ? "border-white text-white bg-transparent hover:bg-white hover:text-black hover:shadow-lg" 
                 : "border-black text-black bg-transparent hover:bg-black hover:text-white hover:shadow-lg"
@@ -68,7 +68,7 @@ const Navbar = () => {
           </Button>
           <Button 
             size="sm" 
-            className={`rounded-full px-3 py-1 sm:px-6 sm:py-2 text-xs sm:text-base transition-all duration-300 hover:scale-105 ${
+            className={`rounded-full px-4 sm:px-6 text-sm sm:text-base transition-all duration-300 hover:scale-105 ${
               isOnDarkBackground 
                 ? "bg-white text-black hover:bg-gray-100 hover:shadow-lg" 
                 : "bg-black text-white hover:bg-gray-800 hover:shadow-lg"
