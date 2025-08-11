@@ -54,7 +54,7 @@ const Navbar = () => {
         </div>
 
         {/* Right navigation - Login/Signup only */}
-        <div className="flex items-center gap-2 sm:gap-4 sm:absolute sm:right-0">
+        <div className="flex items-center gap-2 sm:gap-4 sm:absolute sm:right-8">
           <Button 
             variant="outline" 
             size="sm" 
