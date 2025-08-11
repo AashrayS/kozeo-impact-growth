@@ -57,20 +57,20 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative h-full flex items-end pb-12 sm:pb-16 md:pb-24 pl-4 pr-4 sm:pl-8 sm:pr-8 md:pl-16 lg:pl-24 z-10">
+      <div className="relative h-full flex items-end pb-8 sm:pb-16 md:pb-24 pl-3 pr-3 sm:pl-8 sm:pr-8 md:pl-16 lg:pl-24 z-10">
         <div className="max-w-full sm:max-w-2xl">
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight text-white mb-4 sm:mb-6 md:mb-8">
+          <h1 className="text-2xl leading-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal sm:leading-tight text-white mb-3 sm:mb-6 md:mb-8">
             Ignore The Noise,<br />
             Hire With Purpose
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 max-w-full sm:max-w-xl">
+          <p className="text-sm leading-relaxed sm:text-base md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-8 max-w-full sm:max-w-xl">
             Build your tech portfolio with real-world projects that matter. Every gig on Kozeo contributes to your professional growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 items-start">
-            <button className="bg-white text-black px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg w-fit">
+            <button className="bg-white text-black px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full text-sm sm:text-sm md:text-base lg:text-lg font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg w-fit">
               Start Building Your Profile
             </button>
-            <button className="border border-white text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-medium hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 w-fit">
+            <button className="border border-white text-white px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-full text-sm sm:text-sm md:text-base lg:text-lg font-medium hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 w-fit">
               Post a Project
             </button>
           </div>
