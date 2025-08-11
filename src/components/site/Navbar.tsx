@@ -38,9 +38,9 @@ const Navbar = () => {
         ? "bg-black" 
         : "bg-white border-b border-gray-200"
     }`}>
-      <nav className="flex items-center justify-between sm:justify-center px-8 py-4 relative" aria-label="Global">
-        {/* Center logo on desktop, left on mobile */}
-        <div className="flex items-center justify-start sm:justify-center sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2">
+      <nav className="flex items-center justify-center px-8 py-4 relative" aria-label="Global">
+        {/* Center logo */}
+        <div className="flex items-center justify-center">
           <a href="/" className={`flex items-center gap-3 font-bold text-3xl tracking-tight transition-colors duration-300 ${
             isOnDarkBackground ? "text-white" : "text-black"
           }`}>
