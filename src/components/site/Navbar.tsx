@@ -38,7 +38,7 @@ const Navbar = () => {
         ? "bg-black" 
         : "bg-white border-b border-gray-200"
     }`}>
-      <nav className="flex items-center justify-between sm:justify-center px-4 sm:px-8 py-3 sm:py-4 relative" aria-label="Global">
+      <nav className="flex items-center justify-between sm:justify-center px-4 sm:px-8 py-3 sm:py-5 relative" aria-label="Global">
         {/* Center logo on desktop, left on mobile */}
         <div className="flex items-center justify-start sm:justify-center sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2">
           <a href="/" className={`flex items-center gap-2 sm:gap-3 font-bold text-2xl sm:text-3xl tracking-tight transition-colors duration-300 ${
@@ -58,7 +58,7 @@ const Navbar = () => {
           <Button 
             variant="outline" 
             size="sm" 
-            className={`rounded-full px-4 sm:px-6 text-sm sm:text-base transition-all duration-300 hover:scale-105 ${
+            className={`rounded-full px-3 py-1 sm:px-6 sm:py-2 text-sm sm:text-base transition-all duration-300 hover:scale-105 ${
               isOnDarkBackground 
                 ? "border-white text-white bg-transparent hover:bg-white hover:text-black hover:shadow-lg" 
                 : "border-black text-black bg-transparent hover:bg-black hover:text-white hover:shadow-lg"
@@ -68,7 +68,7 @@ const Navbar = () => {
           </Button>
           <Button 
             size="sm" 
-            className={`rounded-full px-4 sm:px-6 text-sm sm:text-base transition-all duration-300 hover:scale-105 ${
+            className={`rounded-full px-3 py-1 sm:px-6 sm:py-2 text-sm sm:text-base transition-all duration-300 hover:scale-105 ${
               isOnDarkBackground 
                 ? "bg-white text-black hover:bg-gray-100 hover:shadow-lg" 
                 : "bg-black text-white hover:bg-gray-800 hover:shadow-lg"
