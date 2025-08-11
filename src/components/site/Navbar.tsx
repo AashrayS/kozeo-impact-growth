@@ -38,7 +38,7 @@ const Navbar = () => {
         ? "bg-black" 
         : "bg-white border-b border-gray-200"
     }`}>
-      <nav className="flex items-center justify-between sm:justify-center px-4 sm:px-8 py-2 sm:py-8 relative" aria-label="Global">
+      <nav className="flex items-center justify-between sm:justify-center px-4 sm:px-8 py-3 sm:py-8 relative" aria-label="Global">
         {/* Center logo on desktop, left on mobile */}
         <div className="flex items-center justify-start sm:justify-center sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2">
           <a href="/" className={`flex items-center gap-2 sm:gap-3 font-bold text-xl sm:text-3xl tracking-tight transition-colors duration-300 ${
