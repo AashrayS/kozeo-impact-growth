@@ -38,9 +38,9 @@ const Navbar = () => {
         ? "bg-black" 
         : "bg-white border-b border-gray-200"
     }`}>
-      <nav className="flex items-center justify-between px-3 sm:px-8 py-2 sm:py-4 relative" aria-label="Global">
-        {/* Center logo - move to left on mobile */}
-        <div className="flex items-center justify-start sm:justify-center flex-1 sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2">
+      <nav className="flex items-center justify-between sm:justify-center px-3 sm:px-8 py-2 sm:py-4 relative" aria-label="Global">
+        {/* Center logo */}
+        <div className="flex items-center justify-start sm:justify-center sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2">
           <a href="/" className={`flex items-center gap-2 sm:gap-3 font-bold text-xl sm:text-3xl tracking-tight transition-colors duration-300 ${
             isOnDarkBackground ? "text-white" : "text-black"
           }`}>
@@ -54,7 +54,7 @@ const Navbar = () => {
         </div>
 
         {/* Right navigation - Login/Signup only */}
-        <div className="flex items-center gap-1 sm:gap-4">
+        <div className="flex items-center gap-1 sm:gap-4 sm:absolute sm:right-0">
           <Button 
             variant="outline" 
             size="sm" 
