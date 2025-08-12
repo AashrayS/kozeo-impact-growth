@@ -33,7 +33,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ease-in-out ${
+    <header className={`static sm:fixed top-0 inset-x-0 z-50 transition-all duration-300 ease-in-out ${
       isOnDarkBackground 
         ? "bg-black" 
         : "bg-white border-b border-gray-200"
